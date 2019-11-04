@@ -4,7 +4,7 @@
             <Navtop/>
             <div class="index">
                 <div class="leftdiv">
-					<Left/>
+					<Left  :defaultData="defaultData"/>
 				</div>
                 <div class="rightdiv">
                     <div class="bannerdiv">
@@ -34,6 +34,14 @@
 			Left,
 			BannerPath,
 			BottomList
+        },
+        data(){
+            return{
+                defaultData:{
+                    'pageName':"DefaultPage",
+                    'auther': "Hoe"
+                }
+            }
         }
     }
 </script>

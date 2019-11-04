@@ -2,7 +2,7 @@
     <div class="BottomList">
         <div class="panel panel-default">
             <!-- Default panel contents -->
-            <div class="panel-heading left">Panel heading</div>
+            <div class="panel-heading left">{{ pageName }}</div>
             <div class="panel-body">
                 <SearchList />
             </div>
@@ -135,11 +135,27 @@
 
 <script>
     import SearchList from '@/components/SearchList.vue'
+    import EventBus from './msg.js'
     export default {
         name: "BottomList",
         components: {
             SearchList
+        },
+        data(){
+            return {
+                pageName:"DefautlPage"
+            }
+        },
+        // 方法函数
+        mounted(){
+          var _this = this;
+          // 接收事件总线传值 用回调函数处理
+            EventBus.$on('pageName', function (m) {
+                _this.pageName = m;
+            });
         }
+
+
     }
 </script>
 
