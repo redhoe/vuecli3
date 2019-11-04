@@ -1,9 +1,7 @@
 <template>
     <div class="SearchList">
         <div class="input-group">
-            <div class="input-group-btn">
-            </div>
-            <input type="text" class="form-control" aria-label="..." placeholder="Search">
+            <input type="text" class="form-control" placeholder="Search Id">
         </div>
     </div>
 </template>

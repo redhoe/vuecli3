@@ -3,7 +3,7 @@
 
         <div class="list-group">
             <img src="m.png" alt="">
-            <div class="list-group-item disabled leftlink">Data From parent：{{defaultData.auther}}</div>
+            <div class="list-group-item disabled leftlink">Data From parent：{{defaultData.countNum}}</div>
             <a href="#" class="list-group-item disabled">
                 Knowledge->{{pageName}}
             </a>

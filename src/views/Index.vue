@@ -1,5 +1,6 @@
 <template>
     <div>
+
         <div class="mainbody">
             <Navtop/>
             <div class="index">
@@ -11,11 +12,14 @@
 						<BannerPath/>
 					</div>
                     <div class="bottomdiv">
-						<BottomList></BottomList>
+						<BottomList :defaultData="defaultData"></BottomList>
 					</div>
                 </div>
             </div>
+
         </div>
+
+
     </div>
 </template>
 
@@ -38,8 +42,9 @@
         data(){
             return{
                 defaultData:{
-                    'pageName':"DefaultPage",
-                    'auther': "Hoe"
+                    pageName:"DefaultPage",
+                    auther: "Hoe",
+                    countNum:0
                 }
             }
         }
@@ -57,6 +62,11 @@
         margin: 0 auto;
         background-color: azure;
 		margin-top: 50px;
+    }
+    .index2 {
+        width: 90%;
+        margin: 0 auto;
+        background-color: darkred;
     }
 
     .leftdiv {
